@@ -3,10 +3,12 @@ version: 0.2
 phases:
   install:
     commands:
-        - apt-get update
-        - apt install python3.9 -y
-        - python -m pip --version
-        - pip install urllib3[secure] --upgrade
+        - sudo add-apt-repository ppa:deadsnakes/ppa
+        - sudo apt-get update
+        - sudo apt-get install python3.10
+        - sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python2.7
+        - sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10
+        - sudo update-alternatives --config python3
         - pip install -r requirements.txt
   build:
     commands:
