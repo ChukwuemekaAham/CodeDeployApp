@@ -4,6 +4,7 @@ phases:
   install:
     commands:
         - sudo apt-get update
+        - sudo apt install python3.9
         - pip install Flask
   build:
     commands:
