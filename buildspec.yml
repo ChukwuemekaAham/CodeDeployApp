@@ -3,7 +3,9 @@ version: 0.2
 phases:
   install:
     commands:
-        - pip install Flask
+        - sudo yum update -y
+        - sudo yum upgrade
+        - python -m pip3 install Flask
   build:
     commands:
       - echo Build started on `date`
