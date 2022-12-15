@@ -5,7 +5,7 @@ phases:
     commands:
         - sudo apt-get update
         - sudo apt install python3.9 -y
-        - pip install Flask
+        - python -m pip install Flask
   build:
     commands:
       - echo Build started on `date`
