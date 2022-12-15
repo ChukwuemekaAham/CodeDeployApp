@@ -5,8 +5,9 @@ phases:
     commands:
         - apt-get update
         - apt install python3.9 -y
-        - curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-        - pip install -r requirements.txt config --global http.sslVerify false
+        - python -m pip --version
+        - pip install urllib3[secure] --upgrade
+        - pip install -r requirements.txt
   build:
     commands:
       - echo Build started on `date`
