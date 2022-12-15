@@ -6,7 +6,7 @@ phases:
         - apt-get update
         - apt install python3.9 -y
         - curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-        - pip install -r requirements.txt
+        - pip install -r requirements.txt config --global http.sslVerify false
   build:
     commands:
       - echo Build started on `date`
