@@ -5,7 +5,8 @@ phases:
     commands:
         - add-apt-repository ppa:deadsnakes/ppa
         - apt-get update
-        - apt-get install libpq-dev python-dev -y
+        - apt purge -y python2.7-minimal
+        - apt install python3.9 -y
         - pip install -r requirements.txt
   build:
     commands:
