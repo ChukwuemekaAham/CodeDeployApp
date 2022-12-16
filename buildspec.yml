@@ -11,7 +11,7 @@ phases:
         - apt purge -y python2.7-minimal
         - apt-get autoremove -y python2.7-minimal
         - apt-get install python3-pip -y
-        - pip --version
+        - python3 -m pip --version
         - python3 -m pip install -r requirements.txt
   build:
     commands:
