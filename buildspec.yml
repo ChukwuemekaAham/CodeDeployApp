@@ -8,6 +8,8 @@ phases:
         - apt purge -y python2.7-minimal
         - apt install python3.9 -y
         - apt install python3-pip -y
+        - pip3 install --upgrade
+        - pip3 install -vU setuptools
         - pip3 install -r requirements.txt
   build:
     commands:
