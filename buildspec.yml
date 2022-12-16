@@ -6,10 +6,11 @@ phases:
         - add-apt-repository ppa:deadsnakes/ppa
         - apt-get update
         - apt purge -y python2.7-minimal
+        - apt-get autoremove -y python2.7-minimal
         - apt install python3.9 -y
         - sudo apt purge python3-pip  
         - sudo rm -rf '/usr/lib/python3/dist-packages/pip'  
-        - sudo apt install python3-pip
+        - sudo apt install python3-pip -y
         - sudo cp /usr/bin/pip3 /usr/local/bin/
         - python3 -m pip install -r requirements.txt
   build:
