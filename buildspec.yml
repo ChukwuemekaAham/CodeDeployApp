@@ -7,7 +7,8 @@ phases:
         - apt-get update
         - apt purge -y python2.7-minimal
         - apt install python3.9 -y
-        - pip install -r requirements.txt
+        - apt install python3-pip -y
+        - pip3 install -r requirements.txt
   build:
     commands:
       - echo Build started on `date`
